@@ -1,0 +1,70 @@
+/*
+* 兼容 iOS < 11.2 & iOS >= 11.2 底部
+//@import '~@/colorui/common.scss';
+*/
+@import './base.scss';
+@import './UIComponent.scss';
+@mixin bbs() {
+  box-sizing: border-box;
+}
+// ios底部安全区函数 $a必填,属性名.$b距离长度,非必填，不填就是0
+@mixin safe($a,$b:0) {
+  &{#{$a}: #{$b}px;}
+  @if($b==0){
+    &{#{$a}: constant(safe-area-inset-bottom);}
+    &{#{$a}: env(safe-area-inset-bottom);}
+  }@else {
+    &{#{$a}: calc(#{$b}px + constant(safe-area-inset-bottom));}
+    &{#{$a}: calc(#{$b}px + env(safe-area-inset-bottom));}
+  }
+}
+/*
+两边有边距用flex布局，下兼容不正常flex布局
+$n:一行几个
+$pd:正方形之间的距离
+$img:是否用于图片
+*/
+@mixin lolfer($n,$pd,$img:0){
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(#{percentage(1/$n)} - #{ $n  / ($n + 1)  * $pd} );
+  margin:0 $pd $pd 0;
+  &:nth-child(#{$n}n){
+    margin-right: 0;
+  }
+  @if($img==1){
+    @include lolferPb($n,$pd);
+  }
+  //@include cl(width, percentage(1/$n),( $n ) / $n  * $pd );
+}
+// 两边有边距用flex布局，下兼容不正常flex布局
+@mixin lolferPb($n,$pd){
+  padding-bottom: calc(#{percentage(1/$n)} - #{ $n  / ($n + 1)  * $pd} );
+}
+// 文字超出隐藏
+%otw{
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+// flex 居中布局
+%center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+// 居中布局 -- 设置一个正方形 sq：宽高
+@mixin cen($sq:0) {
+  @extend %center;
+  @if(abs($sq)>0){
+    height: $sq;
+    width: $sq;
+  }
+}
+// border-radius
+@mixin br($sq:0) {
+  @if(abs($sq)>0){
+   border-radius: $sq;
+  }
+}
+

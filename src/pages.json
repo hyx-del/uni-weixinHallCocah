@@ -1,0 +1,546 @@
+{
+    "pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "梵音瑜伽"
+			}
+        },
+        {
+			"path": "pages/news/index",
+			"style": {
+                "navigationBarTitleText": "资讯",
+                "enablePullDownRefresh": true
+			}
+        },
+        {
+			"path": "pages/reservation/index",
+			"style": {
+                "navigationBarTitleText": "约课",
+                "enablePullDownRefresh": true
+			}
+        },
+        {
+			"path": "pages/reservation/detail/index",
+			"style": {
+				"navigationBarTitleText": "门店详情"
+			}
+        },
+        {
+			"path": "pages/shop/index",
+			"style": {
+				"navigationBarTitleText": "商城"
+			}
+        },
+
+        {
+			"path": "pages/news/detail/index",
+			"style": {
+                "navigationBarTitleText": "资讯详情",
+                "usingComponents": {
+                    // #ifdef MP-WEIXIN
+                    "canvasdrawer": "/wxcomponents/canvasdrawer/canvasdrawer",
+                    "wxparse": "/wxcomponents/wxParse/index"
+                    // #endif
+                }
+			}
+        },
+        {
+			"path": "pages/order/list/index",
+			"style": {
+				"navigationBarTitleText": "我的订单"
+			}
+        },
+        {
+			"path": "pages/order/detail/index",
+			"style": {
+				"navigationBarTitleText": "订单详情"
+			}
+        },
+        {
+			"path": "pages/order/payment/index",
+			"style": {
+				"navigationBarTitleText": "订单结算"
+			}
+        },
+        {
+			"path": "pages/order/pay-result/index",
+			"style": {
+				"navigationBarTitleText": "支付结果"
+			}
+        },
+        {
+			"path": "pages/user/home/index",
+			"style": {
+				"navigationBarTitleText": "个人中心"
+			}
+        },
+        {
+			"path": "pages/user/info/index",
+			"style": {
+				"navigationBarTitleText": "个人信息"
+			}
+        },
+        {
+			"path": "pages/user/info-update/index",
+			"style": {
+				"navigationBarTitleText": "信息修改"
+			}
+        },
+        {
+			"path": "pages/user/booking/index",
+			"style": {
+                "navigationBarTitleText": "我的预约",
+                "enablePullDownRefresh": true
+			}
+        },
+        {
+			"path": "pages/user/booking/detail/index",
+			"style": {
+				"navigationBarTitleText": "预约详情"
+			}
+        },
+        {
+			"path": "pages/user/booking/peer/index",
+			"style": {
+				"navigationBarTitleText": "添加同行"
+			}
+        },
+        {
+			"path": "pages/user/collection/index",
+			"style": {
+				"navigationBarTitleText": "我的收藏"
+			}
+        },
+        {
+			"path": "pages/user/course-card/list/index",
+			"style": {
+                "navigationBarTitleText": "我的课程卡",
+                "enablePullDownRefresh": true
+			}
+        },
+        {
+			"path": "pages/user/course-card/detail/index",
+			"style": {
+				"navigationBarTitleText": "课程卡详情"
+			}
+        },
+        {
+			"path": "pages/user/course-card/record/index",
+			"style": {
+				"navigationBarTitleText": "使用记录"
+			}
+        },
+        {
+			"path": "pages/user/course-card/close-card/index",
+			"style": {
+				"navigationBarTitleText": "我的课程卡"
+			}
+        },
+
+        {
+			"path": "pages/user/body-data/index",
+			"style": {
+				"navigationBarTitleText": "体测数据"
+			}
+        },
+        {
+			"path": "pages/user/stored-value/index",
+			"style": {
+				"navigationBarTitleText": "我的余额"
+			}
+        },
+        {
+			"path": "pages/user/recharge/index",
+			"style": {
+				"navigationBarTitleText": "充值"
+			}
+        },
+        {
+			"path": "pages/user/recharge-detail/index",
+			"style": {
+				"navigationBarTitleText": "明细"
+			}
+        },
+        {
+			"path": "pages/user/refund/index",
+			"style": {
+				"navigationBarTitleText": "退款"
+			}
+        },
+        {
+			"path": "pages/user/sign/index",
+			"style": {
+				"navigationBarTitleText": "签到"
+			}
+        },
+        {
+			"path": "pages/user/coupons/index",
+			"style": {
+                "navigationBarTitleText": "我的优惠券",
+                "enablePullDownRefresh": true
+			}
+        },
+        {
+			"path": "pages/user/card-coupons/index",
+			"style": {
+                "navigationBarTitleText": "我的联卡券",
+                "enablePullDownRefresh": true
+			}
+        },
+        {
+			"path": "pages/user/coupons-selected/index",
+			"style": {
+				"navigationBarTitleText": "优惠券"
+			}
+        },
+        {
+			"path": "pages/user/comment/index",
+			"style": {
+				"navigationBarTitleText": "评价"
+			}
+        },
+        {
+			"path": "pages/user/feedback/index",
+			"style": {
+				"navigationBarTitleText": "意见反馈"
+			}
+        },
+        {
+			"path": "pages/user/feedback-log/index",
+			"style": {
+				"navigationBarTitleText": "反馈记录"
+			}
+        },
+        {
+			"path": "pages/user/sign-result/index",
+			"style": {
+				"navigationBarTitleText": "签到结果"
+			}
+        },
+        {
+			"path": "pages/course/list/index",
+			"style": {
+				"navigationBarTitleText": "团课列表"
+			}
+        },
+        {
+			"path": "pages/course/detail/index",
+			"style": {
+				"navigationBarTitleText": "课程详情"
+			}
+        },
+        {
+			"path": "pages/course/plan-detail/index",
+			"style": {
+				"navigationBarTitleText": "课程详情"
+			}
+        },
+        {
+			"path": "pages/course/reservation/index",
+			"style": {
+				"navigationBarTitleText": "课程预约"
+			}
+        },
+        {
+			"path": "pages/course/queue/index",
+			"style": {
+				"navigationBarTitleText": "添加排队"
+			}
+        },
+        {
+			"path": "pages/course/private/index",
+			"style": {
+				"navigationBarTitleText": "私教预约"
+			}
+        },
+        {
+			"path": "pages/course/private-booking/index",
+			"style": {
+				"navigationBarTitleText": "课程预约"
+			}
+        },
+        {
+			"path": "pages/course/result/index",
+			"style": {
+				"navigationBarTitleText": "预约结果"
+			}
+        },
+        {
+			"path": "pages/coach/list/index",
+			"style": {
+                "navigationBarTitleText": "会馆教练",
+                "enablePullDownRefresh": true
+			}
+        },
+        {
+			"path": "pages/coach/teacher/index",
+			"style": {
+				"navigationBarTitleText": "名师培训"
+			}
+        },
+        {
+			"path": "pages/coach/detail/index",
+			"style": {
+				"navigationBarTitleText": "教练详情"
+			}
+        },
+        {
+			"path": "pages/course/list2/index",
+			"style": {
+                "navigationBarTitleText": "FineYoga课程",
+                "enablePullDownRefresh": true
+			}
+        },
+        {
+			"path": "pages/member/login/index",
+			"style": {
+				"navigationBarTitleText": "登录",
+				"enablePullDownRefresh":false
+			}
+        },
+        {
+			"path": "pages/member/bind/index",
+			"style": {
+				"navigationBarTitleText": "绑定会员"
+			}
+        },
+        {
+			"path": "pages/member/register/index",
+			"style": {
+				"navigationBarTitleText": "注册"
+			}
+        },
+        {
+			"path": "pages/video/list/index",
+			"style": {
+				"navigationBarTitleText": "梵音视频"
+			}
+		},
+		{
+			"path":"pages/user/buy-card-voucher/index",
+			"style":{
+				"navigationBarTitleText":"优惠购券"
+			}
+		},
+		{
+			"path":"pages/user/card-details/index",
+			"style":{
+				"navigationBarTitleText":"购买优惠券"
+			}
+        },
+        {
+			"path":"pages/webview/index",
+			"style":{
+				"navigationBarTitleText":""
+			}
+		},
+		{
+			"path":"pages/user/course-card/preview/index",
+			"style":{
+				"navigationBarTitleText":""
+			}
+		},
+      {
+        "path": "pages/login/index",
+        "style": {
+          "navigationBarTitleText": "登录授权"
+        }
+      },
+      {
+        "path": "pages/about/index",
+        "style": {
+          "navigationBarTitleText": ""
+        }
+      }
+	],
+	"subPackages":[
+		{
+			"root": "coachPages",
+			"pages":[
+				{
+					"path": "coach-train/home/index",
+					"style": {
+                        "navigationBarTitleText": "教练培训",
+                        "enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "coach-train/home/genre",
+					"style": {
+                        "enablePullDownRefresh": false,
+						"usingComponents": {
+                            "canvasdrawer": "/wxcomponents/canvasdrawer/canvasdrawer",
+                            "wxparse": "/wxcomponents/wxParse/index"
+                        }
+					}
+				},
+				{
+					"path": "coach-train/semester-details/index",
+					"style": {
+                        "navigationBarTitleText": "学期详情",
+                        "usingComponents": {
+                            "canvasdrawer": "/wxcomponents/canvasdrawer/canvasdrawer",
+                            "wxparse": "/wxcomponents/wxParse/index"
+                        }
+                    }
+				},
+				{
+					"path": "coach-train/sign-up/index",
+					"style": {
+						"navigationBarTitleText": "教培报名"
+					}
+				},
+				{
+					"path": "coach-train/card-details/index",
+					"style": {
+						"navigationBarTitleText": "查看身份证照片"
+					}
+				},
+				{
+					"path": "coach-train/cashier-desk/index",
+					"style": {  
+						"navigationBarTitleText": "收银台"
+					}
+				},
+				{
+					"path": "coach-train/pay-info/index",
+					"style": {
+						"navigationBarTitleText": "付款成功"
+					}
+				},
+				{
+					"path": "coach-train/my-sign-up/index",
+					"style": {
+                        "navigationBarTitleText": "我的报名",
+						"disableScroll":true
+					}
+				},
+				{
+					"path": "coach-train/my-coach-train/index",
+					"style": {
+                        "navigationBarTitleText": "我的教培",
+                        "enablePullDownRefresh": true
+					}
+				},
+				{
+					"path": "coach-train/personal-data/index",
+					"style": {
+						"navigationBarTitleText": "个人资料"
+					}
+				},
+				{
+					"path": "coach-train/setting-info/index",
+					"style": {
+						"navigationBarTitleText": "资料设置"
+					}
+				},
+				{
+					"path": "coach-train/report-card/index",
+					"style": {
+						"navigationBarTitleText": "成绩单"
+					}
+				},
+				{
+					"path": "coach-train/my-credential/index",
+					"style": {
+						"navigationBarTitleText": "我的证书"
+					}
+				},
+				{
+					"path": "coach-train/look-credential/index",
+					"style": {
+						"navigationBarTitleText": "查看证书"
+					}
+				},
+				{
+					"path": "coach-train/schedule/index",
+					"style": {
+						"navigationBarTitleText": "我的课表"
+					}
+				},
+				{
+					"path": "coach-train/order/index",
+					"style": {
+						"navigationBarTitleText": "我的订单",
+						"mp-alipay":{"allowsBounceVertical":"NO"},
+						"disableScroll":true
+					}
+				},
+				{
+					"path": "coach-train/order-details/index",
+					"style": {
+						"navigationBarTitleText": "订单详情"
+					}
+				}
+			]
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "梵音瑜伽",
+		"navigationBarBackgroundColor": "#F8F8F8",
+        "backgroundColor": "#F8F8F8",
+        "navigationStyle": "custom"
+    },
+    "tabBar": {
+        "borderStyle": "black",
+        "backgroundColor": "#ffffff",
+        "color": "#636F7C",
+        "selectedColor": "#F08336",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "iconPath": "static/images/tabbar/home.png",
+                "selectedIconPath": "static/images/tabbar/home-selected.png",
+                "text": "首页"
+            },
+            {
+                "pagePath": "pages/news/index",
+                "iconPath": "static/images/tabbar/news.png",
+                "selectedIconPath": "static/images/tabbar/news-selected.png",
+                "text": "资讯"
+            },
+            {
+                "pagePath": "pages/reservation/index",
+                "iconPath": "static/images/tabbar/class.png",
+                "selectedIconPath": "static/images/tabbar/class-selected.png",
+                "text": "约课"
+            },
+            // {
+            //     "pagePath": "pages/shop/index",
+            //     "iconPath": "static/images/tabbar/shop.png",
+            //     "selectedIconPath": "static/images/tabbar/shop-selected.png",
+            //     "text": "商城"
+            // },
+            {
+                "pagePath": "pages/user/home/index",
+                "iconPath": "static/images/tabbar/mine.png",
+                "selectedIconPath": "static/images/tabbar/mine-selected.png",
+                "text": "我的"
+            }
+        ]
+		},
+	"preloadRule": {
+		"pages/index/index": {
+				"network": "all",
+				"packages": ["coachPages"]
+		}
+	},
+	"condition" : { //模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式(list 的索引项)
+		"list": [
+			{
+				"name": "login", //模式名称
+				"path": "pages/login/index", //启动页面，必选
+				"query": "" //启动参数，在页面的onLoad函数里面得到
+			},
+			{
+				"name": "1123125641", //模式名称
+				"path": "coachPages/coach-train/home/index", //启动页面，必选
+				"query": "" //启动参数，在页面的onLoad函数里面得到
+			}
+		]
+	}
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.3 (81716) - https://sketch.com -->
+    <title>金额</title>
+    <desc>Created with Sketch.</desc>
+    <g id="icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="other-icons" transform="translate(-25.000000, -186.000000)" fill="#FFCF00" fill-rule="nonzero">
+            <g id="金额" transform="translate(25.000000, 186.000000)">
+                <rect id="矩形" opacity="0" x="0" y="0" width="50" height="50"></rect>
+                <path d="M25,50 C11.25,50 0,38.75 0,25 C0,11.25 11.25,0 25,0 C38.75,0 50,11.25 50,25 C50,38.75 38.75,50 25,50 Z M25,40.3125 C25.3125,40.3125 25.9375,40.3125 26.25,40 L40.3125,23.125 C40.625,22.5 40.625,21.875 40.3125,21.25 L36.25,13.4375 C36.25,12.8125 35.625,12.5 35,12.5 L15,12.5 C14.375,12.5 13.75,12.8125 13.75,13.4375 L9.6875,21.25 C9.375,21.875 9.375,22.5 9.6875,23.125 L23.75,39.6875 C24.0625,40 24.6875,40.3125 25,40.3125 Z M13.59375,20.3125 L15.9375,15.625 L34.0625,15.625 L36.40625,20.3125 L13.59375,20.3125 Z M35.8627717,23.4375 L25,36.25 L14.1372283,23.4375 L35.8627717,23.4375 Z" id="形状结合"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,104 @@
+//@import '~@/colorui/UIComponent.scss';
+$c_main:#EF8236;// 主色调
+$c_vice:#23a3c5;// 副色调
+// 按钮通用样式
+@mixin btn($h:36rpx,$bg:$c_main,$color:#fff,$fz:32rpx) {
+  height: $h;
+  line-height: $h;
+  border-radius: $h;
+  background: $bg;
+  font-size: $fz;
+  color: $color;
+  text-align: center;
+  //@debug($fz)
+}
+// 按钮镂空样式
+@mixin btn_no($h:36rpx,$bg:#fff,$color:#fff,$fz:32rpx,$borderColor:#e5e5e5) {
+  height: $h;
+  line-height: $h - 2;
+  border-radius: $h;
+  background: $bg;
+  font-size: $fz;
+  border:1rpx solid $borderColor;
+  color: $color;
+  text-align: center;
+}
+// 镂空但文字颜色和border颜色相同的按钮
+@mixin btn_same($h:36rpx,$color:$c_main,$bg:0,$fz:0) {
+  height: $h;
+  line-height: $h - 2;
+  border-radius: $h;
+  border:1rpx solid $color;
+  color: $color;
+  text-align: center;
+  @if($fz!=0){
+    font-size: $fz;
+  }
+  @if($bg==0){
+    background: rgba($color,0.05);
+  }@else{
+    background: $bg;
+  }
+}
+// 所有按钮的不可点击和gary的样式
+@mixin btn_disable($h:36rpx,$color:$c_main,$fz:32rpx) {
+  &_cant,&_disable,&_gray{
+    @include btn($h,$color);
+  }
+  // 不可点击（有色）
+  &.cant,&_cant{
+     opacity: 0.5;
+    //background: lighten($color,20%);
+  }
+  // 不可点击
+  &.disable,&_disable{
+    background: #F5F5F5;
+    color: #B8B8B8;
+  }
+  // 置灰状态
+  &.gray,&_gray{
+    background: #E6E6E6;
+    color: #A3A3A3;
+  }
+  // 镂空
+  &.empty, &_empty{
+    @include btn_no($h,#fff,#333,$fz);
+  }
+  // 镂空但文字颜色和border颜色相同的按钮
+  &.same,&_same{
+    @include btn_same($h,$color);
+  }
+}
+/*
+生成
+*/
+@mixin btnRun($sizes,$colors,$debug:0) {
+  $namestr:'';
+  @each $color,$c in $colors{
+    @each $sizeName,$h,$fz in $sizes{
+      //$namestr:$namestr+ btn_#{$colorName}_#{$sizeName}+','+ btn_long_#{$colorName}_#{$sizeName}+',';
+      $namestr:$namestr+ ' | '+ btn_#{$color}_#{$sizeName};
+      %btn_#{$color+'_'+$sizeName},.btn_#{$color+'_'+$sizeName}{
+        @include btn($h,$c,#fff,$fz);
+        @include btn_disable($h,$c,$fz);
+        display: inline-block;
+        box-sizing: border-box;
+        padding: 0 30rpx;
+        min-width: 180rpx;
+      }
+      %btn_long_#{$color+'_'+$sizeName},.btn_long_#{$color+'_'+$sizeName}{
+        @include btn($h,$c,#fff,$fz);
+        @include btn_disable($h,$c,$fz);
+        width: 100%;
+      }
+    }
+    $namestr:$namestr+',';
+  }
+  @if($debug==1){
+    //$namestr:$namestr+' |';
+    @debug ($namestr);
+  }
+}
+$sizes:(s88,88rpx,32rpx),(s78,78rpx,32rpx),(s64,64rpx,30rpx),(s64,48rpx,24rpx);
+$colors:(main,$c_main),(vice,$c_vice),(red,#f00);
+@include btnRun($sizes,$colors);

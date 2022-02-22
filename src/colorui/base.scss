@@ -1,0 +1,77 @@
+//@import '~@/asset/common.scss';
+
+$c_main:#EF8236;// 主色调
+$c_vice:#23a3c5;// 副色调
+
+$c_sup1:#f8a528;// 辅助色 多用于点缀，标签，按钮状态，对应页面背景
+$c_sup2:#35cb75;// 辅助色 多用于点缀，标签
+$c_sup3:#f64948;// 辅助色 用于价格、消息气泡背景色、错误、警告、失
+$c_sup4:#4C3D33;// 辅助色 用于需要重点强调的文字（模块标题）、选中 c
+$c_sup5:#E8C28B;// 辅助色 用于图标、Navigation背景色
+
+//背景色
+$c_bg:#F7F7F7;// 用于底部大背景色
+$c_disable:#e6e6e6;// 用于分割线、禁用按钮
+//文字色
+$c_3:#333333;//主要文字颜色，用于标题、正文等
+$c_6:#666666;//次级文字颜色，用于正文中的次要文字、次要
+$c_9:#999999;//辅助文字颜色，用于弱提示，如商品规格、数
+$c_b3:#B3B3B3;//辅助文字颜色，用于弱提示，如表单和搜索框
+$c_be:#BEBEBE;//辅助文字颜色，禁用文字颜色
+
+// 字体
+$ft_52:52rpx;//商品详情页的商品价格
+$ft_42:42rpx;//文章、课程等重要标题
+$ft_36:36rpx;//重要文字、主页面标题、商品价格
+$ft_32:32rpx;//重要文字、标题、导航
+$ft_28:28rpx;//需要强调、突出的正文文字
+$ft_24:24rpx;//辅助性信息、提示信息
+$ft_20:20rpx;//常用于标签文字
+
+%ft_52,.ft_52{font-size:52rpx;}//商品详情页的商品价格
+%ft_42,.ft_42{font-size:42rpx;}//文章、课程等重要标题
+%ft_36,.ft_36{font-size:36rpx;}//重要文字、主页面标题、商品价格
+%ft_32,.ft_32{font-size:32rpx;}//重要文字、标题、导航
+%ft_28,.ft_28{font-size:28rpx;}//需要强调、突出的正文文字
+%ft_24,.ft_24{font-size:24rpx;}//辅助性信息、提示信息
+%ft_20,.ft_20{font-size:20rpx;}//常用于标签文字
+
+// 字重
+%fw_4,.fw_4{font-weight: 400;};//普通字体
+%fw_6,.fw_6{font-weight: bold;};//加重字体
+
+//圆角
+%r_10,.r_10{border-radius: 10rpx}
+%r_20,.r_20{border-radius: 20rpx}
+%r_30,.r_30{border-radius: 30rpx}
+%r_40,.r_40{border-radius: 40rpx}
+//边距
+%margin_10,.margin_10{margin: 10rpx}
+%margin_20,.margin_20{margin: 20rpx}
+%margin_30,.margin_30{margin: 30rpx}
+%margin_40,.margin_40{margin: 40rpx}
+
+// 边距和padding的占位和类,使用：m+数字,例如：@extend %ml10,margin-left:10rpx;
+$mp:10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40;
+@each $i in $mp{
+  $mid:#{$i}rpx;
+  %m#{$i},.m#{$i}{margin: $mid;}
+  %ml#{$i},.ml#{$i}{margin-left: $mid;}
+  %mr#{$i},.mr#{$i}{margin-right: $mid;}
+  %mt#{$i},.mt#{$i}{margin-top: $mid;}
+  %mb#{$i},.mb#{$i}{margin-bottom: $mid;}
+  %pd#{$i},.pd#{$i}{padding: $mid;}
+  %pdl#{$i},.pdl#{$i}{padding-left: $mid;}
+  %pdr#{$i},.pdr#{$i}{padding-right: $mid;}
+  %pdt#{$i},.pdt#{$i}{padding-top: $mid;}
+  %pdb#{$i},.pdb#{$i}{padding-bottom: $mid;}
+}
+
+// 底部弹窗基础样式
+%pop_40,.pop_40{box-sizing: border-box;border-radius: 40rpx 40rpx 0 0;padding: 42rpx 30rpx;background: #fff;}
+
+//渐变
+%g_vice,.g_vice{background: linear-gradient(270deg,#1d96ca, #33d1df);} //大面积使用，广泛用于主风格页背景，卡片背景色
+%g_main,.g_main{background: linear-gradient(270deg,#ef8236, #ffc061);} //大面积使用，多用于背景，卡片背景色
+%g_main2,.g_main2{background: linear-gradient(90deg,#ef8236, #ffa659);} //用于主要按钮，如“立即购买”、“支付”、“去抢购”等按钮 「适用积分商城」备份
+
